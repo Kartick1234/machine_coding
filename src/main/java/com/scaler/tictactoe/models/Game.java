@@ -21,6 +21,7 @@ public class Game {
     private List<Move> moves;
     private List<Board> boardStates;
     private WinningStrategy winningStrategy;
+    private int numberOfSymbols;
 
     private Game(Board currentBoard, List<Player> players, WinningStrategy winningStrategy) {
         this.currentBoard = currentBoard;
@@ -29,6 +30,15 @@ public class Game {
         this.moves = new ArrayList<>();
         this.boardStates = new ArrayList<>();
         this.winningStrategy = winningStrategy;
+        this.numberOfSymbols = 0;
+    }
+
+    public int getNumberOfSymbols() {
+        return numberOfSymbols;
+    }
+
+    public void setNumberOfSymbols(int numberOfSymbols) {
+        this.numberOfSymbols = numberOfSymbols;
     }
 
     public Board getCurrentBoard() {

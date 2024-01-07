@@ -7,6 +7,11 @@ public class Board {
     private int size;
     private List<List<Cell>> board;
 
+    public Board(Board board) {
+        this.size = board.size;
+        this.board = board.board;
+    }
+
     public Board(int size) {
         this.size = size;
         this.board = new ArrayList<>();
